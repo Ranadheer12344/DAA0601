@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int i,arr[20];
+	int n,t,j;
+	printf("enter the length of the array:");
+	scanf("%d",&n);
+	printf("enter the array elements:");
+	for(i=0;i<=n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=1+1;j<n;j++)
+		{
+			if(arr[i]<arr[j])
+			{
+				t=arr[i];
+				arr[i]=arr[j];
+				arr[j]=t;
+			}
+		}
+	}
+	printf("after sorting:");
+	for(i=0;i<n;i++)
+	{
+		printf("%d",arr[i]);
+    }
